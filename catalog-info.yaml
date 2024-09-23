@@ -1,0 +1,21 @@
+apiVersion: backstage.io/v1alpha1
+kind: Resource
+metadata:
+  name: ppkuxd44w-go-gitops
+  description: This is GitOps manifest for ppkuxd44w-go   
+  links:
+    - url: https://www.redhat.com/en/solutions/trusted-software-supply-chain
+      title: Trusted Secure Supply Chain 
+      icon: dashboard
+      type: admin-dashboard
+  annotations:    
+    argocd/app-name: ppkuxd44w-go
+    jenkins.io/job-full-name: ppkuxd44w-go-gitops
+    backstage.io/kubernetes-id: ppkuxd44w-go 
+    backstage.io/techdocs-ref: dir:. 
+spec:
+  type: gitops
+  owner: user:guest 
+  lifecycle: experimental
+  dependsOn:
+    - component:ppkuxd44w-go
